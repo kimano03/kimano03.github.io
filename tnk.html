@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image:url("images/tnk.jpeg");
+            width: 100%;
+            height: 100%;
+            color: whitesmoke;
+
+        }
+        nav {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        header{
+            width: 100%;
+            height: 500px;
+        }
+        section
+        {
+            float: right;
+            padding: 0 3rem;
+            text-align: center;
+            margin-top: 50px;
+        }
+        section>p{
+            margin-bottom: 1rem;
+        }
+        section>p:first-child
+        {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        section>p:last-of-type
+        {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        input[id="menuicon"]{
+    display: none;
+}
+input[id="menuicon"] + label {
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: fixed;
+    right: 0;
+    top: calc(50% - 25px);
+    transition: all .35s;
+    cursor: pointer;
+}
+input[id="menuicon"]:checked + label {
+    z-index: 2;
+    right: 300px;
+}
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #000;
+    transition: all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+    top: 0;
+} 
+input[id="menuicon"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom: 0;
+}
+input[id="menuicon"]:checked + label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity: 0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+div h2{
+    margin-left: 20px;
+    font-size: 40px;
+    color: white;
+}
+div li a{
+    margin-left: 10px;
+    font-size: 30px;
+    list-style: none;
+    color: whitesmoke;
+    line-height: 3;
+    text-decoration: none;
+}
+div[class="sidebar"]{
+    width: 300px;
+    height: 100%;
+    background: #222;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 1;
+    transition: all .35s;
+}
+input[id="menuicon"]:checked + label + div {
+    right: 0;
+}
+    </style>
+</head>
+<body>
+        <header>
+        </header>
+        <section>
+            <p style="font-size: 40px;">Thanks</p>
+            <p></p>
+            <p>여태까지 제 포트폴리오를 읽어주셔서 감사합니다
+            <p id="size3">다들 힘내서 다른 시험 잘 봐요!</p><br>
+            </p>
+        </section>
+        <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+        <div class="sidebar">
+            <h2>Option</h2>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html">Main</a></li>
+                <li><a href="http://127.0.0.1:5500/tab.html">Profile</a></li>
+                <li><a href="http://127.0.0.1:5500/about.html">About Me</a></li>
+                <li><a href="http://127.0.0.1:5500/tnk.html">Thanks</a></li>
+            </ul>
+        </div>
+</body>
+</html>
